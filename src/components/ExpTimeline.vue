@@ -10,13 +10,13 @@ const layout = computed(() => {
 
 const allExperience = ref([]);
 
-// onMounted(() => {
-//   fetch("data.json")
-//     .then((resp) => resp.json())
-//     .then(({ experience }) => {
-//       allExperience.value = experience;
-//     });
-// });
+onMounted(() => {
+  fetch("data.json")
+    .then((resp) => resp.json())
+    .then(({ experience }) => {
+      allExperience.value = experience;
+    });
+});
 </script>
 
 <template>
