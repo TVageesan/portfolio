@@ -1,0 +1,47 @@
+[
+  {
+    "heading": "Work Experience",
+    "entries": [
+      {
+        "title": "IoT Developer at LiftAuth",
+        "subtitle": "August 2024 - December 2024",
+        "content": "Designed and implemented a lift simulator to facilitate robot development with LiftAuth's smart lifts, delivering the end product ahead of schedule. Integrated all aspects of the IoT system, from designing PCBs to building web interfaces and MQTT networks."
+      },
+      {
+        "title": "Web App Development Intern at G Element",
+        "subtitle": "May 2023 - August 2024",
+        "content": "Constructed a full stack application from scratch to enable building managers to create Standard Operating Procedures. Utilized Vue and Quasar for frontend, and Express and PostgresSQL for backend development."
+      }
+    ]
+  },
+  {
+    "heading": "Competitions",
+    "entries": [
+      {
+        "title": "Software Team, Singapore AUV Challenge",
+        "subtitle": "January 2023 - December 2023",
+        "content": "Achieved 13th place in the finals as part of NUS Bumblebee's Team Hornet. Specialized in implementing camera vision techniques, including optical flow and YOLO detection models for improved drone velocity and target recognition."
+      },
+      {
+        "title": "Team Lead, 3D Tronics Digital Making National Competition",
+        "subtitle": "January 2019 - December 2019",
+        "content": "Developed a high-fidelity prototype for blind accessibility to public transport. Won the 'Most Innovative Design' award among 32 competing schools."
+      }
+    ]
+  },
+  {
+    "heading": "Projects",
+    "entries": [
+      {
+        "title": "Bojio",
+        "subtitle": "May 2023 - August 2024",
+        "content": "Developed a web app for NUS students to manage schedules and coordinate meetups. Gained experience with backend development in C# and Springboot, and used Vercel for hosting."
+      },
+      {
+        "title": "Remote Controlled Rescue Bot",
+        "subtitle": "January 2023 - May 2023",
+        "content": "Created a remote-controlled bot using Arduino and Raspberry Pi, integrating sensors for visualization and mapping a room with near 100% accuracy. Constructed a UART communication protocol between the Arduino and Pi using bare-metal programming."
+      }
+    ]
+  }
+]
