@@ -1,34 +1,59 @@
 <script setup>
-import { computed, ref } from "vue";
-import { projects } from "../data.json";
+import { ref, computed } from "vue";
+import { projects, skills } from "../data.json";
 
-const selectedSkill = ref(null);
-const allProjects = ref(projects);
+const selectedSkills = ref([]);
+const allSkills = ref(skills);
 
 const filteredProjects = computed(() => {
-  if (!selectedSkill.value) return allProjects.value;
-  return allProjects.value.filter((project) =>
-    project.tags.includes(selectedSkill.value)
+  if (selectedSkills.value.length === 0) return projects;
+  return projects.filter((project) =>
+    project.tags.some((tag) => selectedSkills.value.includes(tag))
   );
 });
 </script>
 
 <template>
-  <div class="q-pa-md">
-    <h2 class="text-h4 q-mb-md">Featured Projects</h2>
+  <div class="text-h2 q-py-md header">Projects</div>
+  <div class="q-pb-md">
+    <q-chip
+      v-for="skill in allSkills"
+      :key="skill"
+      clickable
+      outline
+      color="primary"
+      :label="skill"
+      :class="
+        selectedSkills.includes(skill) ? 'text-secondary' : 'text-primary'
+      "
+      :selected="selectedSkills.includes(skill)"
+      @click="
+        selectedSkills.includes(skill)
+          ? selectedSkills.splice(selectedSkills.indexOf(skill), 1)
+          : selectedSkills.push(skill)
+      "
+    />
+    <q-chip
+      clickable
+      outline
+      color="negative"
+      label="Clear"
+      @click="selectedSkills = []"
+    />
+  </div>
+  <div>
     <q-card
       v-for="project in filteredProjects"
-      :key="project.name"
-      class="q-mb-md q-pa-md"
+      :key="project.id"
+      class="q-mb-md"
     >
       <q-card-section>
-        <h3 class="text-h6">{{ project.name }}</h3>
+        <h3>{{ project.name }}</h3>
         <p>{{ project.description }}</p>
-        <div class="q-mt-md">
+        <div>
           <q-chip
             v-for="tag in project.tags"
             :key="tag"
-            clickable
             outline
             color="secondary"
           >
