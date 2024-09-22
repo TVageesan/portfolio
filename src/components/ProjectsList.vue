@@ -12,14 +12,14 @@ const filteredProjects = computed(() => {
   );
 });
 
-onMounted(() => {
-  fetch("data.json")
-    .then((resp) => resp.json())
-    .then(({ projects, skills }) => {
-      allSkills.value = skills;
-      allProjects.value = projects;
-    });
-});
+// onMounted(() => {
+//   fetch("data.json")
+//     .then((resp) => resp.json())
+//     .then(({ projects, skills }) => {
+//       allSkills.value = skills;
+//       allProjects.value = projects;
+//     });
+// });
 </script>
 
 <template>
