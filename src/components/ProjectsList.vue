@@ -1,15 +1,24 @@
 <script setup>
-import { ref, computed } from "vue";
-import { projects, skills } from "../data.json";
+import { ref, computed, onMounted } from "vue";
 
 const selectedSkills = ref([]);
-const allSkills = ref(skills);
+const allProjects = ref([]);
+const allSkills = ref();
 
 const filteredProjects = computed(() => {
-  if (selectedSkills.value.length === 0) return projects;
+  if (selectedSkills.value.length === 0) return allProjects;
   return projects.filter((project) =>
     project.tags.some((tag) => selectedSkills.value.includes(tag))
   );
+});
+
+onMounted(() => {
+  fetch("data.json")
+    .then((resp) => resp.json())
+    .then(({ projects, skills }) => {
+      allSkills.value = skills;
+      allProjects.value = projects;
+    });
 });
 </script>
 
