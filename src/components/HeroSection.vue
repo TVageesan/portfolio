@@ -8,6 +8,19 @@
         future.
       </p>
     </div>
+    <div>
+      <q-btn flat icon="img: github.png" href="https://github.com/TVageesan" />
+      <q-btn
+        flat
+        icon="img: linkedin.png"
+        href="https://www.linkedin.com/in/tvageesan/"
+      />
+      <q-btn
+        flat
+        icon="img: gmail.png"
+        href="emailto:thiruvageesan3@gmail.com"
+      />
+    </div>
   </div>
 </template>
 

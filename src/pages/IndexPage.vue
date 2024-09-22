@@ -13,9 +13,7 @@ import AboutSection from "components/AboutSection.vue";
 
     <div class="content">
       <AboutSection />
-      <q-separator class="q-ma-md" inset color="secondary" />
       <ExpTimeline />
-      <q-separator class="q-ma-md" inset color="secondary" />
       <ProjectsList />
     </div>
   </div>
