@@ -3,6 +3,8 @@ import HeroSection from "components/HeroSection.vue";
 import ExpTimeline from "components/ExpTimeline.vue";
 import ProjectsList from "components/ProjectsList.vue";
 import AboutSection from "components/AboutSection.vue";
+import SkillSection from "components/SkillSection.vue";
+import TestimonialSection from "components/TestimonialSection.vue";
 </script>
 
 <template>
@@ -14,6 +16,7 @@ import AboutSection from "components/AboutSection.vue";
     <div class="content">
       <AboutSection />
       <ExpTimeline />
+      <SkillSection />
       <ProjectsList />
     </div>
   </div>

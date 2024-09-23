@@ -33,7 +33,7 @@
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: #48cfcb;
+  color: #32d5cf;
   margin-bottom: 1.5rem;
 }
 
