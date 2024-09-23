@@ -5,19 +5,68 @@ import ProjectsList from "components/ProjectsList.vue";
 import AboutSection from "components/AboutSection.vue";
 import SkillSection from "components/SkillSection.vue";
 import TestimonialSection from "components/TestimonialSection.vue";
+
+import { ref, onMounted } from "vue";
+
+// Sections array with labels and IDs
+const sections = [
+  { id: "about", label: "About" },
+  { id: "experience", label: "Experience" },
+  { id: "skills", label: "Skills" },
+  { id: "projects", label: "Projects" },
+  { id: "testimonials", label: "Testimonials" },
+];
+
+const currentSection = ref("about");
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          currentSection.value = entry.target.id;
+        }
+      });
+    },
+    { threshold: 0.5 } // 50% visibility before changing the section
+  );
+
+  // Observe each section
+  sections.forEach((section) => {
+    const sectionElement = document.getElementById(section.id);
+    if (sectionElement) {
+      observer.observe(sectionElement);
+    }
+  });
+});
 </script>
 
 <template>
   <div class="page-container">
+    <!-- Sidebar Navigation -->
     <div class="hero-sidebar">
       <HeroSection />
     </div>
 
-    <div class="content">
-      <AboutSection />
-      <ExpTimeline />
-      <SkillSection />
-      <ProjectsList />
+    <!-- Main Content -->
+    <div class="q-pa-md">
+      <AboutSection id="about" />
+
+      <section id="experience">
+        <ExpTimeline />
+      </section>
+
+      <section id="skills">
+        <SkillSection />
+      </section>
+
+      <section id="projects">
+        <ProjectsList />
+      </section>
+
+      <section id="testimonials">
+        <TestimonialSection />
+      </section>
     </div>
   </div>
 </template>
@@ -28,19 +77,10 @@ import TestimonialSection from "components/TestimonialSection.vue";
 }
 
 .hero-sidebar {
-  flex-basis: 30%;
   position: sticky;
   top: 0;
   height: 100vh;
   background: #424242;
   color: #ffffff;
-  padding: 2rem;
-  padding-right: 0.07rem;
-}
-
-.content {
-  flex-grow: 1;
-  padding: 2rem;
-  background: #ffffff;
 }
 </style>

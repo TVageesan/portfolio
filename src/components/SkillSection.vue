@@ -51,9 +51,9 @@ const skillsets = [
   {
     name: "Looking to develop...",
     skills: [
-      { name: "Data Analytics", url: "unkown.jpg" },
-      { name: "AI", url: "unkown.jpg" },
-      { name: "Machine Learning", url: "unkown.jpg" },
+      { name: "Data Analytics", url: "unknown.png" },
+      { name: "AI", url: "unknown.png" },
+      { name: "Machine Learning", url: "unknown.png" },
     ],
   },
 ];
@@ -64,7 +64,7 @@ const getSkillImage = (skill) => {
 </script>
 
 <template>
-  <div class="text-h2 q-py-md header">Skillsets</div>
+  <div class="text-h2 q-py-md header">Skills</div>
   <q-carousel
     v-model="slide"
     swipeable

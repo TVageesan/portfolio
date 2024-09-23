@@ -1,6 +1,5 @@
 <template>
   <div class="testimonials-container q-pa-lg">
-    <div class="text-h3 q-mb-md">Testimonials</div>
     <q-carousel
       v-model="currentSlide"
       swipeable
