@@ -1,21 +1,33 @@
 <template>
-  <div class="text-h2 header q-py-md">About</div>
+  <div class="text-h2 text-center header q-py-md">About</div>
   <div class="about-section">
     <div class="about-content">
       <p class="about-text">
-        Hi, I'm Thiru Vageesan, a software engineer passionate about solving
-        complex problems and building innovative solutions in embedded systems,
-        IoT, and smart city technologies. My journey into engineering began with
-        a fascination for how technology can make life smarter and more
-        efficient. Over the years, I've honed my skills across different
-        domains, constantly learning and evolving as the industry advances.
+        Back in 2019, I picked Computing as a H2 Subject on a whim. It was an
+        "easy A", as seniors liked to say. Unfortunately (for my sleep
+        schedule), Computing became a much bigger part of my life than I ever
+        anticipated. Fast forward to today and I've tumbled down the rabbit hole
+        of building personal projects, various websites and now even a veritable
+        garage of various robot cars.
       </p>
       <p class="about-text">
-        I believe in staying versatile, being open to challenges, and
-        continuously improving, both as an individual and as a professional.
-        Whether it’s diving into a new coding language, exploring cutting-edge
-        technologies, or collaborating on impactful projects, I’m always ready
-        for the next step.
+        I've had the privilege of working at G Element, a smart building
+        company, where I learnt the fundamentals of applying my skills to a
+        professional work environment. I'm also currently working with LiftAuth,
+        a startup here in NUS that focuses on making robot accessible lifts.
+      </p>
+      <p class="about-text">
+        Through my experiences both inside NUS and out of it, I've developed a
+        deep passion for everything and anything computer engineering. I believe
+        that Singapore's ongoing transformation into a Smart City relies on
+        innovation in these technologies, and my experience at LiftAuth has
+        sparked a desire to be a part of this exciting new market not as an
+        employee but as a pioneer.
+      </p>
+      <p class="about-text">
+        When I'm not at my computer, you can usually find me at the gym, rock
+        climbing, reading or running around Faerûn trying to defeat the
+        Absolute.
       </p>
     </div>
   </div>

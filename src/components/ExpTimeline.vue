@@ -11,7 +11,7 @@ const layout = computed(() => {
 </script>
 
 <template>
-  <div class="text-h2 q-py-md header">Experience</div>
+  <div class="text-h2 text-center q-py-md header">Experience</div>
   <q-timeline :layout="layout" color="secondary">
     <q-timeline-entry
       v-for="({ title, subtitle, content, color, icon }, idx) in experience"

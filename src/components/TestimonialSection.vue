@@ -1,95 +1,90 @@
 <template>
-  <div class="testimonials-container q-pa-lg">
-    <q-carousel
-      v-model="currentSlide"
-      swipeable
-      animated
-      control-color="secondary"
-      navigation
-      padding
-      arrows
-      height="250px"
-      class="text-black rounded-borders"
-    >
-      <q-carousel-slide
-        v-for="({ quote, author, pdf }, i) in testimonials"
-        :key="i"
-        class="column no-wrap flex-center text-center"
-      >
-        <q-card class="testimonial-card q-pa-md">
-          <q-card-section class="testimonial-quote">
-            <q-icon name="format_quote" class="testimonial-icon" />
-            <p>{{ quote }}</p>
-          </q-card-section>
-          <q-card-section class="testimonial-author">
-            <span>- {{ author }}</span>
-          </q-card-section>
-          <q-btn
-            flat
-            color="primary"
-            :href="pdf"
-            target="_blank"
-            label="View Full Letter"
-            class="q-mt-md"
-          />
-        </q-card>
-      </q-carousel-slide>
-    </q-carousel>
+  <div class="text-h2 text-center header">Testimonials</div>
+  <div class="testimonial-section">
+    <div class="quote-container">
+      <div class="quote">
+        <p>
+          "[Thiru]'s' ability to remain <strong>calm and composed</strong> under
+          pressure... His <strong>passion for learning</strong> and natural
+          inclination towards <strong>problem-solving</strong> make him an
+          excellent candidate."
+        </p>
+        <footer>— Dr. Tan Tiow Seng, A/P</footer>
+        <div class="pdf-link">
+          <a href="TanTiowSeng.pdf" target="_blank">Full letter</a>
+        </div>
+      </div>
+      <div class="quote">
+        <p>
+          "Thiru demonstrated an <strong>exceptional ability</strong> to grasp
+          new concepts quickly and independently. His
+          <strong>resourcefulness</strong> and
+          <strong>proactive nature</strong> make him an ideal member of any
+          startup environment."
+        </p>
+        <footer>— Mr. Tan Guo Yang, Co-founder of LiftAuth</footer>
+        <div class="pdf-link">
+          <a href="TanGuoYang.pdf" target="_blank">Full letter</a>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
-<script setup>
-import { ref } from "vue";
-
-const currentSlide = ref(0);
-const testimonials = [
-  {
-    quote:
-      "Thiru was exceptional in demonstrating a deep understanding of software engineering principles.",
-    author: "Prof. John Doe",
-    pdf: "path/to/recommendation-letter1.pdf",
-  },
-  {
-    quote:
-      "A hardworking and dedicated individual, Thiru consistently delivered high-quality results.",
-    author: "Dr. Jane Smith",
-    pdf: "path/to/recommendation-letter2.pdf",
-  },
-  {
-    quote:
-      "Thiru showed great leadership and collaboration skills during our IoT project.",
-    author: "Dr. Alex Williams",
-    pdf: "path/to/recommendation-letter3.pdf",
-  },
-];
-</script>
-
 <style scoped>
-.testimonials-container {
-  max-width: 800px;
-  margin: auto;
+.testimonial-section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.testimonial-card {
+.quote-container {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
+}
+
+.quote {
+  width: 45%;
+  padding: 1rem;
   background-color: #f9f9f9;
   border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial-quote p {
-  font-size: 1.2rem;
-  font-style: italic;
+.quote p {
+  font-size: 1.1rem;
+  color: #333;
 }
 
-.testimonial-author {
+.quote em {
   font-weight: bold;
-  margin-top: 12px;
+  color: #007bff;
 }
 
-.testimonial-icon {
-  font-size: 1.8rem;
-  color: #666;
-  margin-bottom: 8px;
+footer {
+  margin-top: 1rem;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.pdf-link {
+  margin-top: 2rem;
+}
+
+.pdf-link a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #007bff;
+  border-bottom: 1px solid #007bff;
+  transition: all 0.3s ease;
+}
+
+.pdf-link a:hover {
+  color: #0056b3;
+  border-bottom: 1px solid #0056b3;
 }
 </style>

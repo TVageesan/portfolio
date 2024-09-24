@@ -1,9 +1,9 @@
 <script setup>
-import { ref, computed } from "vue";
-import { projects, skills } from "../data.json";
+import { ref, computed, onMounted } from "vue";
+import { projects } from "../data.json";
 
 const selectedSkills = ref([]);
-const allSkills = ref(skills);
+const allSkills = ref([]);
 
 const filteredProjects = computed(() => {
   if (selectedSkills.value.length === 0) return projects;
@@ -11,11 +11,21 @@ const filteredProjects = computed(() => {
     project.tags.some((tag) => selectedSkills.value.includes(tag))
   );
 });
+
+onMounted(() => {
+  for (const { tags } of projects) {
+    for (const tag of tags) {
+      if (!allSkills.value.includes(tag)) {
+        allSkills.value.push(tag);
+      }
+    }
+  }
+});
 </script>
 
 <template>
-  <div class="text-h2 q-py-md header">Projects</div>
-  <div class="q-pb-md">
+  <div class="text-h2 text-center q-py-md header">Projects</div>
+  <div class="q-pa-md row items-start q-gutter-md">
     <q-chip
       v-for="skill in allSkills"
       :key="skill"
@@ -41,15 +51,20 @@ const filteredProjects = computed(() => {
       @click="selectedSkills = []"
     />
   </div>
-  <div>
-    <q-card
-      v-for="project in filteredProjects"
-      :key="project.id"
-      class="q-mb-md"
-    >
+
+  <div class="q-pa-md row items-start q-gutter-md">
+    <q-card class="my-card" v-for="project in filteredProjects" :key="project">
+      <q-img
+        :src="
+          project.url ? project.url : 'https://cdn.quasar.dev/img/parallax2.jpg'
+        "
+        height="400px"
+      >
+        <div class="absolute-bottom text-h6">{{ project.name }}</div>
+      </q-img>
+
       <q-card-section>
-        <h3>{{ project.name }}</h3>
-        <p>{{ project.description }}</p>
+        <div class="text-body">{{ project.description }}</div>
         <div>
           <q-chip
             v-for="tag in project.tags"
@@ -62,7 +77,7 @@ const filteredProjects = computed(() => {
         </div>
         <q-btn
           flat
-          label="View on GitHub"
+          label="View Project"
           :href="project.link"
           target="_blank"
           class="q-mt-md"
@@ -71,3 +86,9 @@ const filteredProjects = computed(() => {
     </q-card>
   </div>
 </template>
+
+<style lang="sass" scoped>
+.my-card
+  width: 400px
+  height: 600px
+</style>

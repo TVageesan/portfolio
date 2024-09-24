@@ -50,7 +50,9 @@ onMounted(() => {
 
     <!-- Main Content -->
     <div class="q-pa-md">
-      <AboutSection id="about" />
+      <section id="about">
+        <AboutSection />
+      </section>
 
       <section id="experience">
         <ExpTimeline />
@@ -60,7 +62,7 @@ onMounted(() => {
         <SkillSection />
       </section>
 
-      <section id="projects">
+      <section id="projects" class="q-pl-xl">
         <ProjectsList />
       </section>
 
@@ -80,6 +82,8 @@ onMounted(() => {
   position: sticky;
   top: 0;
   height: 100vh;
+  min-width: 400px;
+  max-width: 400px;
   background: #424242;
   color: #ffffff;
 }

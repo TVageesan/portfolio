@@ -1,46 +1,87 @@
 {
-  "skills": [
-    "Robotics",
-    "Web Development",
-    "IoT",
-    "Machine Learning",
-    "Full-Stack",
-    "Embedded Systems"
-  ],
   "projects": [
     {
-      "name": "LiftAuth Lift Simulator",
-      "description": "A lift simulator designed to test and develop robot-lift integration.",
-      "link": "https://github.com/tvageesan/liftauth-lift-simulator",
+      "name": "This site!",
+      "description": "A static website built in 2 days to showcase my portfolio as part of my NOC application.",
+      "link": "https://github.com/TVageesan/portfolio",
+      "url": "portfolio.png",
       "tags": [
-        "IoT",
-        "Robotics",
-        "Embedded Systems"
+        "Web Development"
       ]
     },
     {
       "name": "Bojio",
-      "description": "A web app that helps students manage meetups through schedule coordination.",
-      "link": "https://github.com/tvageesan/bojio",
+      "description": "A web app that helps students organize meetups by comparing their schedules.",
+      "link": "https://bojio-five.vercel.app/#/",
+      "url": "bojio.png",
       "tags": [
         "Web Development",
         "Full-Stack"
       ]
     },
     {
-      "name": "Remote Controlled Rescue Bot",
-      "description": "A bot designed for remote control rescue missions with advanced sensors.",
-      "link": "https://github.com/tvageesan/rescue-bot",
+      "name": "Alex",
+      "description": "A bot designed for remote control rescue missions. Utilizes LIDAR, ROS and SLAM algorithims to enhance navigation and mapping capabilities.",
+      "link": "https://docs.google.com/document/d/1cksEgiNHOsXBrx2mx5ocQOQ8t-onV4LN/edit?usp=sharing&ouid=112392405706962596773&rtpof=true&sd=true",
+      "url": "alex.png",
       "tags": [
         "Robotics",
         "IoT",
         "Machine Learning"
       ]
+    },
+    {
+      "name": "Keat Hong Recycles",
+      "description": "Part of a 3 man team to build a landing page for a grassroots recylcing initiative by Keat Hong Youth Network.",
+      "link": "https://keat-hong-recycles.web.app/",
+      "url": "keathong.png",
+      "tags": [
+        "Web Development"
+      ]
+    },
+    {
+      "name": "Lebron",
+      "description": "A bot with a focus on acutation - utilizing a servo arm to catapult a ball towards a target.",
+      "link": "https://docs.google.com/document/d/1UkorIj3--ZBmvLAL3hZqpr8ajSNxelz1PsQRUooyfwY/edit?usp=sharing",
+      "url": "lebron.png",
+      "tags": [
+        "Robotics"
+      ]
+    },
+    {
+      "name": "MBot",
+      "description": "A autonomous bot utilizing ultrasonic and IR sensors as well as a Euclidean distance algorithim to navigate a maze.",
+      "link": "https://docs.google.com/document/d/1EYS_dCkZ125vVRrlhKv8UECxwEUL_KVvGsQVUTNqa3k/edit?usp=sharing",
+      "url": "mbot.png",
+      "tags": [
+        "Robotics",
+        "IoT",
+        "Machine Learning"
+      ]
+    },
+    {
+      "name": "CookedBook",
+      "description": "A webapp to automatically scrape recipe off the internet, construct meal plans with balanced nutrition and then provide the necessary grocery list.",
+      "url": "chef.jpg",
+      "link": "https://github.com/TVageesan/Recipe_Scraper",
+      "tags": [
+        "Web Development",
+        "Scraping"
+      ]
+    },
+    {
+      "name": "PyChess",
+      "description": "A chess clone coded in python, utilizing a custom game engine + visualization with PyGame.",
+      "link": "https://github.com/TVageesan/Chess",
+      "url": "chess.png",
+      "tags": [
+        "App Development"
+      ]
     }
   ],
   "experience": [
     {
-      "title": "IoT Developer at LiftAuth",
+      "title": "IoT Dev Intern - LiftAuth",
       "subtitle": "August 2024 - December 2024",
       "content": "Designed and implemented a lift simulator to facilitate robot development with LiftAuth's smart lifts. Delivered the end product ahead of schedule, integrating all aspects of the IoT system.",
       "quote": {
@@ -49,22 +90,32 @@
       }
     },
     {
-      "title": "Web App Development Intern at G Element",
+      "title": "Web Dev Intern - G Element",
       "subtitle": "May 2023 - August 2024",
       "content": "Constructed a full stack application to allow building managers to create Standard Operating Procedures."
     },
     {
-      "title": "Software Team, Singapore AUV Challenge",
+      "title": "Software Team - Singapore AUV Challenge",
       "subtitle": "January 2023 - December 2023",
       "content": "Achieved 13th place in the finals as part of NUS Bumblebee's Team Hornet. Specialized in implementing camera vision techniques, including optical flow and YOLO detection models for improved drone velocity and target recognition."
     },
     {
-      "title": "Web App Development Intern at G Element",
+      "title": "Web Dev Intern - G Element",
       "subtitle": "Dec 2023 - Dec 2023",
       "content": "Constructed a full stack application to allow building managers to create Standard Operating Procedures."
     },
     {
-      "title": "Team Lead, 3D Tronics Digital Making National Competition",
+      "title": "Singapore Armed Forces, 6AMB",
+      "subtitle": "Mar 2021 - Feb 2023",
+      "content": "Spearheaded initiatives to increase programming capabilties amongst regular servicemen. Built scripts to automate busy work and improved producitivtiy within the maintenance depot."
+    },
+    {
+      "title": "Web Dev - Keat Hong Youth Network",
+      "subtitle": "May 2020 - August 2021",
+      "content": "Worked on a freelance basis to build a landing page for a new recycling initiative."
+    },
+    {
+      "title": "Team Lead - 3D Tronics Digital Making National Competition",
       "subtitle": "January 2019 - December 2019",
       "content": "Developed a high-fidelity prototype for blind accessibility to public transport. Won the 'Most Innovative Design' award among 32 competing schools."
     }

@@ -64,7 +64,7 @@ const getSkillImage = (skill) => {
 </script>
 
 <template>
-  <div class="text-h2 q-py-md header">Skills</div>
+  <div class="text-h2 text-center q-py-md header">Skills</div>
   <q-carousel
     v-model="slide"
     swipeable
