@@ -22,7 +22,32 @@ const layout = computed(() => {
       :color="color || 'secondary'"
       :icon="icon || undefined"
     >
-      <div>{{ content }}</div>
+      <div class="about-text">{{ content }}</div>
     </q-timeline-entry>
   </q-timeline>
 </template>
+
+<style scoped>
+.q-timeline-entry {
+  background: #e0f2f1;
+  border-radius: 12px;
+  padding: 16px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.q-timeline-entry:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.entry-icon {
+  color: #004d40;
+}
+
+.about-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: black;
+  transition: color 0.3s ease;
+}
+</style>

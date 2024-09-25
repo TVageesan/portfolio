@@ -7,6 +7,7 @@ import SkillSection from "components/SkillSection.vue";
 import TestimonialSection from "components/TestimonialSection.vue";
 
 import { ref, onMounted } from "vue";
+import { useQuasar } from "quasar";
 
 // Sections array with labels and IDs
 const sections = [
@@ -34,17 +35,20 @@ onMounted(() => {
   // Observe each section
   sections.forEach((section) => {
     const sectionElement = document.getElementById(section.id);
+
     if (sectionElement) {
       observer.observe(sectionElement);
     }
   });
 });
+
+const $q = useQuasar();
 </script>
 
 <template>
   <div class="page-container">
     <!-- Sidebar Navigation -->
-    <div class="hero-sidebar">
+    <div v-if="!$q.platform.is.mobile" class="hero-sidebar">
       <HeroSection />
     </div>
 
@@ -62,7 +66,7 @@ onMounted(() => {
         <SkillSection />
       </section>
 
-      <section id="projects" class="q-pl-xl">
+      <section id="projects">
         <ProjectsList />
       </section>
 

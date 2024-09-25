@@ -16,7 +16,7 @@ const skillsets = [
     name: "Backend Development",
     skills: [
       { name: "Express", url: "" },
-      { name: "PostgresSQL", url: "" },
+      { name: "PostgresSQL", url: "postgresSQL.png" },
       { name: "Supabase", url: "" },
       { name: "Postman", url: "" },
     ],
@@ -35,7 +35,7 @@ const skillsets = [
     skills: [
       { name: "Atmega2560", url: "" },
       { name: "ESP32", url: "" },
-      { name: "FRDMKL25Z", url: "" },
+      { name: "FRDMKL25Z", url: "FRDMKL25Z.png" },
     ],
   },
   {

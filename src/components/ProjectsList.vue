@@ -25,7 +25,7 @@ onMounted(() => {
 
 <template>
   <div class="text-h2 text-center q-py-md header">Projects</div>
-  <div class="q-pa-md row items-start q-gutter-md">
+  <div class="q-pa-md row items-start justify-center q-gutter-md">
     <q-chip
       v-for="skill in allSkills"
       :key="skill"
@@ -52,7 +52,7 @@ onMounted(() => {
     />
   </div>
 
-  <div class="q-pa-md row items-start q-gutter-md">
+  <div class="q-pa-md row items-start justify-center q-gutter-md">
     <q-card class="my-card" v-for="project in filteredProjects" :key="project">
       <q-img
         :src="
@@ -75,20 +75,26 @@ onMounted(() => {
             {{ tag }}
           </q-chip>
         </div>
+      </q-card-section>
+      <q-card-actions align="left">
         <q-btn
           flat
-          label="View Project"
-          :href="project.link"
+          label="View Details"
+          :href="project.github"
           target="_blank"
           class="q-mt-md"
         />
-      </q-card-section>
+      </q-card-actions>
     </q-card>
   </div>
 </template>
 
-<style lang="sass" scoped>
-.my-card
-  width: 400px
-  height: 600px
+<style scoped>
+.my-card {
+  width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This pushes the button to the bottom */
+}
 </style>

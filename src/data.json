@@ -16,7 +16,7 @@
       "url": "bojio.png",
       "tags": [
         "Web Development",
-        "Full-Stack"
+        "App Development"
       ]
     },
     {
@@ -26,8 +26,7 @@
       "url": "alex.png",
       "tags": [
         "Robotics",
-        "IoT",
-        "Machine Learning"
+        "Embedded"
       ]
     },
     {
@@ -54,9 +53,7 @@
       "link": "https://docs.google.com/document/d/1EYS_dCkZ125vVRrlhKv8UECxwEUL_KVvGsQVUTNqa3k/edit?usp=sharing",
       "url": "mbot.png",
       "tags": [
-        "Robotics",
-        "IoT",
-        "Machine Learning"
+        "Robotics"
       ]
     },
     {
@@ -66,7 +63,7 @@
       "link": "https://github.com/TVageesan/Recipe_Scraper",
       "tags": [
         "Web Development",
-        "Scraping"
+        "Web Scraping"
       ]
     },
     {
@@ -102,7 +99,7 @@
     {
       "title": "Web Dev Intern - G Element",
       "subtitle": "Dec 2023 - Dec 2023",
-      "content": "Constructed a full stack application to allow building managers to create Standard Operating Procedures."
+      "content": "Developed a full stack application to chart timeseries data from various IoT devices for trend analysis."
     },
     {
       "title": "Singapore Armed Forces, 6AMB",
