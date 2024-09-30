@@ -80,7 +80,7 @@ onMounted(() => {
         <q-btn
           flat
           label="View Details"
-          :href="project.github"
+          :href="project.link"
           target="_blank"
           class="q-mt-md"
         />
